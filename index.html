@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+	<head>
+			<link href="css/geral.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" type="text/css" href="css/style.css" />
+			<script type="text/javascript" src="js/jquery.js"></script>
+			<link rel="icon" type="image/png" href="img/logo.ico">
+			<title>Humanize-se</title>
+			
+	</head>
+
+	<body bgcolor="#fefefe">	
+		<!-- MENU -->
+	<div class="geral">
+			<header>
+			<a href="index.html"><img src="img/logo_header.png" width="20%" style="margin-left: 10px; margin-top: 10px;"></a>
+				<div id="menu">
+					<table>
+						<tr>
+							<td><a href="index.html">PÁGINA INICIAL</a></td>
+							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
+							<td><a href="projeto.html">PROJETO</a></td>
+							<td><a href="contato.html">CONTATO</a></td>
+						</tr>
+					</table>
+				</div>
+				<?php 
+					error_reporting(0);
+					require 'conexao.php';
+					session_start();
+					$_SESSION['verificalogin']=$verificalogin;
+					if ($verificalogin==1){
+						echo 'Olá,' $nome;
+					}
+					else if ($verificalogin==0){
+
+				?>
+				<div id="button">
+					<a href="login.html"><img src="img/login.png" width="40%"></a>
+					<a href="cadastro_usuario.html"><img src="img/cadastrar.png" width="40%"></a>
+				</div>
+				<?php
+					}
+				?>
+				
+				<br>
+				<table>
+                	<form method="post" action="busca.php">
+                            <tr>
+                                <td><input type="text" name="buscaf" maxlength="90" style="transition: border 0.3s; width: 182; border-radius: 4px; border-width: 2px; border-style: solid; border-color: #bebebe"></td><td><input type="image" src="img/pesquisar.png" name="buscaf" width="60%"></td>
+                            </tr>
+                    </form>
+				</table>
+			</header>
+			<div style="height:130px;">
+            </div>
+			
+			
+			<!-- BANNER-->
+			<div id="wowslider-container1">
+                <div class="ws_images">
+                    <ul>
+                        <li><img src="img/1.png" alt="Encontre" title="Encontre" id="wows1_0"/></li>
+                        <li><img src="img/2.png" alt="Ajude" title="Ajude" id="wows1_1"/></li>
+                        <li><img src="img/3.png" alt="Contate" title="Contate" id="wows1_2"/></li>
+                    </ul>
+                </div>
+                <div class="ws_bullets"><div>
+                        <a href="#" title="Encontre"><span>1</span></a>
+                        <a href="#" title="Ajude"><span>2</span></a>
+                        <a href="#" title="Contate"><span>3</span></a>
+                </div>
+            </div>
+            <div class="ws_shadow"></div>
+            </div>	
+            <script type="text/javascript" src="js/wowslider.js"></script>
+            <script type="text/javascript" src="js/script.js"></script>
+            
+           <!--FIM DO BANNER-->
+								
+			
+			<div class="conteudo">
+				<!-- CONTEUDO PARTE 1-->
+				<div id="tutorial">
+				<br>
+					<center><font face="Segoe UI" size="4px" color="#be3340"> SAIBA COMO FAZER</font></center>
+					<table align="center">
+						<tr align="center">
+							<td><img src="img/tutorial1.png" width="24%"></td>
+							<td><img src="img/tutorial2.png" width="16%"></td>
+							<td><img src="img/tutorial3.png" width="29%"></td>
+							<td><img src="img/tutorial4.png" width="23%"></td>
+						</tr>
+						<tr>
+							<td><h1>Procure o produto desejado</h1></td>
+							<td><h1>Requisite o produto com o doador</h1></td>
+							<td><h1>Combine os detalhes da entrega</h1></td>
+							<td><h1>Retribua</h1></td>
+						</tr>
+					</table>
+				</div>
+			
+				<!-- CONTEUDO PARTE 2 -->
+				<hr width="80%" size="1px" color="#c4c4c4">
+				<br><br>
+				<div id="text_index_final">
+					<h3>CONHEÇA O PROJETO</h3>
+					<br>
+					<h4>Visamos o estímulo de doações através da internet, facilitando o processo de comunicação entre quem doa e quem recebe. 
+					Acreditamos que cada pessoa pode fazer a diferença, e juntos podemos trazer conforto e mobilidade para aqueles que precisam dela para viver melhor.
+					Uma sociedade solidária e atuante em função dos mais necessitados pode mudar uma nação inteira.
+					Faça seu cadastro e desfrute já de poder ajudar quem mais precisa.</h4>
+				</div>
+				<br><br>
+				<hr width="80%" size="1px" color="#c4c4c4">
+				<!-- CONTEUDO PARTE 3-->
+				<div id="index_text">
+					<h1>POR UM MUNDO MAIS HUMANO</h1>
+					<p><h2>Aqui você encontra equipamentos para portadores de deficiência física ou locomotiva. Você pode tanto anunciar seu produto como solicitar um deles diretamente com o doador.</p>
+					<p>Juntos, podemos ajudar muitas pessoas. Anuncie agora  e torne-se parte dessa mudança.</p></h2>
+				</div>
+				
+				<div id="index_img">					
+							<img src="img/chat1.png" width="50%" style="float: left">
+								<br><br><br><br><br>
+							<img src="img/chat2.png" width="50%" style="float: right; margin-right: 10%">
+				</div>
+			
+			</div>
+			
+			<!-- RODAPÉ-->
+			<div style="height: 750px">
+			</div>
+			<footer>
+				<div id="mapa">
+				<br>
+					<table>
+						<tr>
+							<td><h1>HUMANIZE-SE</h1></td>
+						</tr>
+						<tr>
+							<td><a href="index.html">Página Inicial</a></td>
+							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
+						<tr>
+							<td><a href="projeto.html">Projeto</a></td>
+							<td><a href="contato.html">Contato</a></td></tr>
+						<tr>	
+							<td><a href="cadastro.html">Cadastro</a></td>
+							<td><a href="#" onClick="window.open('termos.html', 'Termos', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=500, HEIGHT=400');">Termos de Uso</a></td>
+						</tr>
+					</table>
+				</div>
+				<div id="contato">
+					<table>
+						<tr>
+						<br>
+							<td><h1>FALE CONOSCO</h1></td>
+						</tr>
+						<tr>
+							<td><a href="https://www.twitter.com/humanizese"><img src="img/twitter.png" width="12%"></a>
+								<a href="https://www.facebook.com/misigners"><img src="img/facebook.png" width="12%"></a>
+								<a href="https://plus.google.com/misigners"><img src="img/plus.png" width="12%"></a>
+								<a href="mailto:misigners@mail.com"><img src="img/mail.png" width="12%"></a></td>
+						</tr>
+					</table>
+				</div>	
+				<br><br><br><br><br>
+				<div id="footer">
+					<table>
+						<tr>
+							<td><h1>Misigners 2015 - <a href="#" onClick="window.open('termos.html', 'Termos', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=500, HEIGHT=400');">Termos de Uso</a></h1></td>
+							<td><img src="img/logo_footer.png"></td>
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,154 @@
+.grid {
+		padding: 30px 30px 30px 30px;
+		width:250px;
+		height:250px;
+		margin: 0 auto;
+		list-style: none;
+		text-align: center;
+		float: left;
+	}
+
+.grid li {
+		display: inline-block;
+		width: 250px;
+		margin: 0;
+		text-align: left;
+		position: relative;
+}
+
+.grid figure {
+		margin: 0;
+		position: relative;
+		width:250px;
+		height:250px;
+}
+
+.grid figure img {
+		max-width: 84.2%;
+		max-height: 150px;
+		display: block;
+		position: relative;
+		border: 3px solid;
+		border-color: white;
+}
+.grid figure h4 {
+		font-family: Open Sans;
+		font-weight: 300;
+		margin-top: 30px;
+		font-size: 0.9em;
+		color: white;
+}
+
+.grid figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #b73c3c;
+		border-radius: 1px;
+		color: #ed4e6e;
+		width:250px;
+		height:250px;
+		border: 1px solid;
+		border-color: #be3340;	
+}
+
+.grid figcaption h3 {
+		margin: 0;
+		padding: 0;
+		z-index: 20;
+		visibility: visible;
+	}
+
+.grid figcaption td {
+		font-family: Segoe UI;
+		font-weight: 100;
+		margin-top: 30px;
+		font-size: 0.8em;
+		color: white;
+	}
+
+.grid figcaption a {
+		margin-bottom: -5%;
+		text-align: center;
+		padding: 5px 10px;
+		border-radius: 2px;
+		display: inline-block;
+		background: #2c3f52;
+		color: #fff;
+}
+
+/* Individual Caption Styles */
+
+
+/* Caption Style 7 */
+	.cs-style-7 li:first-child { z-index: 6; }
+	.cs-style-7 li:nth-child(2) { z-index: 5; }
+	.cs-style-7 li:nth-child(3) { z-index: 4; }
+	.cs-style-7 li:nth-child(4) { z-index: 3; }
+	.cs-style-7 li:nth-child(5) { z-index: 2; }
+	.cs-style-7 li:nth-child(6) { z-index: 1; }
+
+	.cs-style-7 figure img {
+		z-index: 10;
+	}
+
+.cs-style-7 figcaption {
+		height: 250px;
+		width: 250px ;
+		opacity: 0;
+		-webkit-transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
+		-moz-transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
+		transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
+		box-shadow: 0 0 0 0px #b73c3c;
+}
+
+.no-touch .cs-style-7 figure:hover figcaption,
+.cs-style-7 figure.cs-hover figcaption {
+		opacity: 1;
+		box-shadow: 0 0 0 10px #b73c3c;
+}
+
+.cs-style-7 figcaption h3 {
+		margin-top:65%;
+		font-family: Segoe UI Light;
+		font-size: 11px;
+		z-index: 20;
+		visibility:  visible;
+}
+
+.cs-style-7 figcaption h3,
+.cs-style-7 figcaption span,
+.cs-style-7 figcaption a {
+		visibility: visible;
+		opacity: 0;
+		-webkit-transition: opacity 0s;
+		-moz-transition: opacity 0s;
+		transition: opacity 0s;
+}
+
+.cs-style-7 figcaption a {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		text-decoration:none;
+}
+
+.no-touch .cs-style-7 figure:hover figcaption h3,
+.no-touch .cs-style-7 figure:hover figcaption span,
+.no-touch .cs-style-7 figure:hover figcaption a,
+.cs-style-7 figure.cs-hover figcaption h3,
+.cs-style-7 figure.cs-hover figcaption span,
+.cs-style-7 figure.cs-hover figcaption a {
+		-webkit-transition: opacity 0.3s 0.2s;
+		-moz-transition: opacity 0.3s 0.2s;
+		transition: opacity 0.3s 0.2s;
+		opacity: 1;
+		z-index: 20;
+}
+h3 {
+		font-family: Segoe UI;
+		font-size:1.2em;
+		font-weight:300;
+		color:white;
+		z-index: 20;
+}
