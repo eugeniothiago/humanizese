@@ -19,7 +19,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.php">PÁGINA INICIAL</a></td>
+							<td><a href="index.php">PÃGINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.php">PROJETO</a></td>
 							<td><a href="contato.php">CONTATO</a></td>
@@ -76,39 +76,42 @@
 		
 		<!-- CONTEUDO DO PROJETO-->
 		<div class="projeto">
+
 			<div id="projeto_1">
+
 				<center><img src="img/projeto_1.png" width="11%"  style="margin-top: 35px"></center>
 				<hr width="100%" size="0.5px" color="#d3d3d3" style="margin-top: -40.5px">
 				<br><br>
 				<h1>PROJETO</h1>
-				<h2>A Humanize-se é um projeto filantrópico voltado para as necessidades de pessoas especiais, que desejam economizar na hora de obter equipamentos de suporte para deficientes, e também para pessoas que desejam doar seus equipamentos usados.
-				Se você necessita de um equipamento, veio ao lugar certo. Fique de olho nos produtos que são anunciados aqui, você pode encontrar o que precisa e entrar imediatamente em contato com o doador, agilizando o processo de doação.
-				Os doadores podem cadastrar os seus equipamentos, receber solicitações do produto, entrar em contato com o donatário e escolher o modo de entrega, tudo de modo simples e rápido. Cobranças pelo produto não são aceitas, o espírito de doação deve prevalecer.<br><br><br></h2>
-				</div>
+				<h2>A Humanize-se Ã© um projeto filantrÃ³pico voltado para as necessidades de pessoas com deficiÃªncia, que desejam economizar na hora de obter equipamentos de suporte para deficientes, e tambÃ©m para pessoas que desejam doar seus equipamentos usados.
+				Se vocÃª necessita de um equipamento, veio ao lugar certo. Fique de olho nos produtos que sÃ£o anunciados aqui, vocÃª pode encontrar o que precisa e entrar imediatamente em contato com o doador, agilizando o processo de doaÃ§Ã£o.
+				Os doadores podem cadastrar os seus equipamentos, receber solicitaÃ§Ãµes do produto, entrar em contato com o donatÃ¡rio e escolher o modo de entrega, tudo de modo simples e rÃ¡pido. CobranÃ§as pelo produto nÃ£o sÃ£o aceitas, o espÃ­rito de doaÃ§Ã£o deve prevalecer.<br><br><br></h2>
+			
+			</div>
 				
 			<div id="projeto_2">
 				<center><img src="img/projeto_2.png" width="9%"  style="margin-top: 35px"></center>
 				<hr width="80%" size="0.5px" color="#d3d3d3" style="margin-top: -40.5px">
 				<br><br>
-				<h1>CRENÇA</h1>
-				<h2>Acreditamos que uma sociedade solidária e atuante em função dos mais necessitados pode mudar uma nação inteira.</h2>
+				<h1>CRENÃ‡A</h1>
+				<h2>Acreditamos que uma sociedade solidï¿½ria e atuante em funï¿½ï¿½o dos mais necessitados pode mudar uma naï¿½ï¿½o inteira.</h2>
 				
 				<center><img src="img/alvo.png" width="9%"  style="margin-top: 35px"></center>
 				<hr width="80%" size="0.5px" color="#d3d3d3" style="margin-top: -40.5px">
 				<br><br>
-				<h1>PROPÓSITO</h1>
-				<h2>Estimular o lado solidário das pessoas, contribuindo para a qualidade de vida de pessoas com necessidades especiais.</h2>
+				<h1>PROPÃ“SITO</h1>
+				<h2>Estimular o lado solidï¿½rio das pessoas, contribuindo para a qualidade de vida de pessoas com necessidades especiais.</h2>
 				
 				<center><img src="img/projeto_4.png" width="9%"  style="margin-top: 35px"></center>
 				<hr width="80%" size="0.5px" color="#d3d3d3" style="margin-top: -40.5px">
 				<br><br>
 				<h1>EQUIPE</h1>
-				<h2>Humanize-se é um projeto criado e desenvolvido pela Misigners, empresa voltada ao desenvolvimento de páginas web. Entre em contato conosco através do e-mail.<br><br>
+				<h2>Humanize-se Ã© um projeto criado e desenvolvido pela Misigners, empresa voltada ao desenvolvimento de pï¿½ginas web. Entre em contato conosco atravï¿½s do e-mail.<br><br>
 				<a href="mailto:misigners@mail.com"><img src="img/projeto_5.png" width="17%"></a></h2>
 			</div>
 		</div>
 		
-	<!-- RODAPÉ-->
+	<!-- RODAPï¿½-->
 	<div height="50%">
 	</div>
 	<footer>
@@ -119,7 +122,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">Página Inicial</a></td>
+							<td><a href="index.html">PÃ¡gina Inicial</a></td>
 							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>

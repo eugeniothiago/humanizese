@@ -6,17 +6,17 @@
 			<link rel="icon" type="image/png" href="img/logo.ico">
 			<title>Humanize-se - Meu Painel</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-            <script type="text/javascript">
-            function verificar(){
-            var decisao = confirm("Tem certeza que deseja excluir?");
-            if(decisao){
-			return true;
-			}
-			else{
-			return false;
-			}
-			}
-            </script>
+				<script type="text/javascript">
+				function verificar(){
+				var decisao = confirm("Tem certeza que deseja excluir?");
+				if(decisao){
+				return true;
+				}
+				else{
+				return false;
+				}
+				}
+				</script>
 			
 	</head>
 

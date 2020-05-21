@@ -5,17 +5,17 @@
 			<script type="text/javascript" src="js/jquery.js"></script>
 			<link rel="icon" type="image/png" href="img/logo.ico">
 			<title>Humanize-se - Painel do Administrador</title>
-            <script type="text/javascript">
-            function verificar(){
-            var decisao = confirm("Tem certeza que deseja excluir?");
-            if(decisao){
-			return true;
-			}
-			else{
-			return false;
-			}
-			}
-            </script>
+				<script type="text/javascript">
+					function verificar(){
+						var decisao = confirm("Tem certeza que deseja excluir?");
+							if(decisao){
+							return true;
+							}
+							else{
+							return false;
+						}
+					}
+				</script>
 			
 	</head>
 
@@ -27,7 +27,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.php">P¡GINA INICIAL</a></td>
+							<td><a href="index.php">P√ÅGINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.php">PROJETO</a></td>
 							<td><a href="contato.php">CONTATO</a></td>
@@ -58,12 +58,10 @@
 						$imgcadastro="sair.png";
 						$margin="-20px";
 					}
-				
-						
 				?>
 				          
 					
-					<a href="paineluser.php"><img src="img/admin_logout.png" width="70%"></a>
+				<a href="paineluser.php"><img src="img/admin_logout.png" width="70%"></a>
 				</div>
 				
 				
@@ -80,12 +78,13 @@
 			
 
 			<div class="intro_admin">
+
 			<img src="img/admin_intro.png" width="1000px" height="300px" style="position: absolute; z-index: -10">
 				<div style="display: block; margin: 10px;width: 380px; height: 200px; float: right; background-color: #fc6363; opacity: 0.9; margin-top: 100px">
-				<center><h1 style="color:#ffffff">BEM-VINDO, ADMINISTRADOR</h1></center>
-				<i align="justify" style="display: block; margin: 10px;font-family: Segoe UI; font-size: 15px; color: #ffffff">Nesta seÁ„o, vocÍ pode excluir produtos, banir usu·rios e definir novas imagens para o banner da p·gina
-				inicial.<br> Lembre se de consultar os <a href="termos.html">Termos de Uso</a> para determinar se
-				o usu·rio feriu os regulamentos citados no documento. O mesmo pode ser feito com os produtos.</i>
+					<h1 style="color:#ffffff">BEM-VINDO, ADMINISTRADOR</h1>
+					<i align="justify" style="display: block; margin: 10px;font-family: Segoe UI; font-size: 15px; color: #ffffff">Nesta se√ß√£o, voc√™ pode excluir produtos, banir usu√°rios e definir novas imagens para o banner da p√°gina
+					inicial.<br> Lembre se de consultar os <a href="termos.html">Termos de Uso</a> para determinar se
+					o usu√°rio feriu os regulamentos citados no documento. O mesmo pode ser feito com os produtos.</i>
 				</div>
 			</div>
 			
@@ -104,31 +103,41 @@
 				</tr>
 				</table></td>
 				
-				<td><table>
-				<tr>
-					<td><h1 style="font-family: Segoe UI; font-size: 13px; color: #606060">IMAGEM 02</h1>
-						<form method="post" enctype="multipart/form-data" action="up_banner2.php">
-							<input type="file" name="arquivo" style="width:115px;">
-							<input type="submit" value="alterar"></form></td>
-				</tr>
-				</table></td>
+				<td>
+				<table>
+					<tr>
+						<td>
+							<h1 style="font-family: Segoe UI; font-size: 13px; color: #606060">IMAGEM 02</h1>
+								<form method="post" enctype="multipart/form-data" action="up_banner2.php">
+									<input type="file" name="arquivo" style="width:115px;">
+									<input type="submit" value="alterar">
+								</form>
+						</td>
+					</tr>
+				</table>
+				</td>
 				
-				<td><table>
-				<tr>
-					<td><h1 style="font-family: Segoe UI; font-size: 13px; color: #606060">IMAGEM 03</h1>
-						<form method="post" enctype="multipart/form-data" action="up_banner3.php">
-							<input type="file" name="arquivo" style="width:115px;">
-							<input type="submit" value="alterar"></form></td>
-				</tr>
-				</table></td>
+				<td>
+				<table>
+					<tr>
+						<td>
+							<h1 style="font-family: Segoe UI; font-size: 13px; color: #606060">IMAGEM 03</h1>
+							<form method="post" enctype="multipart/form-data" action="up_banner3.php">
+								<input type="file" name="arquivo" style="width:115px;">
+								<input type="submit" value="alterar">
+							</form>
+						</td>
+					</tr>
+				</table>
+				</td>
 				</tr>
 				</table>
 			</div>
 			
             <div class="boxdeleteuser">
 			<hr width="60%" height="1px" color="#8c8c8c" style="border-radius: 0.5px">
-			<center><h1>BANIR USU¡RIOS</h1></center>
-			<font face="Segoe UI" size="2">
+				<h1>BANIR USU√ÅRIOS</h1>
+				<font face="Segoe UI" size="2">
             	<br>
 				<?php
 					error_reporting(0);
@@ -149,10 +158,10 @@
                     <div class="boxuser">
 					<img src="upload/usuarios/<?php echo $imagem; ?>"><br>
                     <?php
-					echo "CÛdigo: <i>". $id."</i><BR>";
+					echo "C√≥digo: <i>". $id."</i><BR>";
 					echo "Nome: <i>".$nome."</i><BR>";
 					echo "Email: <i>".$email."</i><BR>";
-					echo "<span><a href='deleteusuario.php?id=$id'onclick='return verificar();'>Excluir Usu·rio</a></span>";
+					echo "<span><a href='deleteusuario.php?id=$id'onclick='return verificar();'>Excluir UsuÔøΩrio</a></span>";
 					?>
                     </div>
             
@@ -167,7 +176,7 @@
             <br>
             
             <div class="boxdeleteproduto">
-			<center><h1>EXCLUIR PRODUTOS</h1></center>
+			<h1>EXCLUIR PRODUTOS</h1>
             	<br>
 				<?php
 					error_reporting(0);
@@ -186,10 +195,10 @@
 					<div class="boxproduto">
 					<img src="upload/produtos/<?php echo $imagem; ?>"><br>
                     <?php
-					echo "CÛdigo: <i>". $id."</i><BR>";
+					echo "CÔøΩdigo: <i>". $id."</i><BR>";
 					echo "Produto: <i>".$produto."</i><BR>";
-					echo "Estado de ConservaÁ„o: <i>".$estado."</i><BR>";
-					echo "DescriÁ„o: <i>".$descricao."</i><BR>";
+					echo "Estado de ConservaÔøΩÔøΩo: <i>".$estado."</i><BR>";
+					echo "DescriÔøΩÔøΩo: <i>".$descricao."</i><BR>";
 					echo "<span><a href='deleteproduto.php?id=$id' onclick='return verificar();'>Excluir Produto</a></span>";
 					?>
                     <BR>
@@ -202,7 +211,7 @@
             </div>
 			<a href="sair.php">Logout</a>
 			
-			<!-- RODAP…-->
+			<!-- RODAP√â-->
 			
 			<footer>
 				<div id="mapa">
@@ -211,7 +220,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">P·gina Inicial</a></td>
+							<td><a href="index.html">P√°gina Inicial</a></td>
 							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>
