@@ -17,7 +17,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.php">PÁGINA INICIAL</a></td>
+							<td><a href="index.php">Pï¿½GINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.php">PROJETO</a></td>
 							<td><a href="contato.php">CONTATO</a></td>
@@ -41,6 +41,7 @@
 					$verificalogin=$_SESSION['verificalogin'];
 					
 					if ($verificalogin==1){
+						
 						$linklogin="paineluser.php";
 						$imglogin=$imagem;
 						$width="30%";
@@ -131,7 +132,7 @@
 					}
 					if($x==0)
 					{
-					echo "Não existem cadastros no banco de dados";
+					echo "Nï¿½o existem cadastros no banco de dados";
 					}
 					
 					?>
@@ -141,7 +142,7 @@
 			
 			
 			
-			<!-- RODAPÉ-->
+			<!-- RODAPï¿½-->
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<footer>
 				<div id="mapa">
@@ -150,7 +151,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">Página Inicial</a></td>
+							<td><a href="index.html">Pï¿½gina Inicial</a></td>
 							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>
