@@ -42,21 +42,22 @@
 					$email=$_SESSION['emailSession'];
 					$sql ="SELECT*FROM login WHERE email='$email' ";
 			       	//Executamos a Query
-			        $resultado=mysql_query($sql);
-			        while ($linha=mysql_fetch_array($resultado))
-			        {
-					$id =$linha['id'];
-					$nome=$linha['nome'];
-					$email=$linha['email'];
-					$imagem=$linha ['foto'];
-					$senha=$linha['senha'];
-					$endereco=$linha['endereco'];
-					$telefone=$linha['telefone'];
-					$estado=$linha['estado'];
-					$cidade=$linha ['cidade'];
-					$_SESSION ['imagem']=$imagem;
-					$_SESSION['id']=$id;
-		}
+					$resultado=mysqli_query($conexao,$sql);
+					
+			        while ($linha=mysqli_fetch_array($resultado))
+						{
+							$id =$linha['id'];
+							$nome=$linha['nome'];
+							$email=$linha['email'];
+							$imagem=$linha ['foto'];
+							$senha=$linha['senha'];
+							$endereco=$linha['endereco'];
+							$telefone=$linha['telefone'];
+							$estado=$linha['estado'];
+							$cidade=$linha ['cidade'];
+							$_SESSION ['imagem']=$imagem;
+							$_SESSION['id']=$id;
+						}
 		
 					?>
 				<div id="button">
@@ -229,14 +230,15 @@
                                 $email=$_SESSION['emailSession'];
                                 $sql ="SELECT*FROM produto WHERE emailuser='$email' ";
                                 //Executamos a Query
-                                $resultado=mysql_query($sql);
-                                while ($linha=mysql_fetch_array($resultado))
-                                {
-                                    $id =$linha['id'];
-                                    $nome=$linha['nome'];
-                                    $estadoc=$linha['estado'];
-                                    $descricao=$linha ['descricao'];
-                                    $imagem=$linha['imagem'];
+                                $resultado=mysqli_query($conexao,$sql);
+									while ($linha=mysqli_fetch_array($resultado))
+									
+									{
+										$id =$linha['id'];
+										$nome=$linha['nome'];
+										$estadoc=$linha['estado'];
+										$descricao=$linha ['descricao'];
+										$imagem=$linha['imagem'];
                                
                             ?>
 							

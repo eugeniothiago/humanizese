@@ -4,7 +4,7 @@
             <link rel="stylesheet" type="text/css" href="css/style.css" />
 			<script type="text/javascript" src="js/jquery.js"></script>
 			<link rel="icon" type="image/png" href="img/logo.ico">
-			<title>Humanize-se - Cadastro de Usuário</title>
+			<title>Humanize-se - Cadastro de Usuï¿½rio</title>
 			
 	</head>
 
@@ -16,7 +16,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.html">PÁGINA INICIAL</a></td>
+							<td><a href="index.html">Pï¿½GINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.html">PROJETO</a></td>
 							<td><a href="contato.html">CONTATO</a></td>
@@ -62,11 +62,11 @@
                 $extensao = strtolower($extensao);
              
                 // Somente imagens, .jpg;.jpeg;.gif;.png
-                // Aqui eu enfilero as extesões permitidas e separo por ';'
+                // Aqui eu enfilero as extesï¿½es permitidas e separo por ';'
                 // Isso server apenas para eu poder pesquisar dentro desta String
                 if(strstr('.jpg;.jpeg;.gif;.png', $extensao))
                 {
-                    // Cria um nome único para esta imagem
+                    // Cria um nome ï¿½nico para esta imagem
                     // Evita que duplique as imagens no servidor.
                     $novoNome = md5(microtime()) . $extensao;
                      
@@ -80,14 +80,14 @@
                         
                     }
                     else
-                        echo "Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />";
+                        echo "Erro ao salvar o arquivo. Aparentemente vocï¿½ nï¿½o tem permissï¿½o de escrita.<br />";
                 }
                 else
-                    echo "Você poderá enviar apenas arquivos *.jpg; *.jpeg;*.gif;*.png<br />";
+                    echo "Vocï¿½ poderï¿½ enviar apenas arquivos *.jpg; *.jpeg;*.gif;*.png<br />";
             }
             else
             {
-                echo "Você não enviou nenhum arquivo!";
+                echo "Vocï¿½ nï¿½o enviou nenhum arquivo!";
             }
             	
 		 	
@@ -99,14 +99,14 @@
          $cidadep=$_POST['cidadef'];
          $emailp=$_POST['emailf'];
          $datnascp=$_POST ['dataf'];
-         $senhap=$_POST ['senhaf'];
+		 $senhap=$_POST ['senhaf'];
          $sql="insert into login(nome,sexo,endereco,telefone,estado,cidade,email,data,senha,foto)
           values('$nomep','$sexop','$enderecop','$telefonep','$estadop','$cidadep','$emailp','$datnascp','$senhap','$novoNome')";
-          $resultado=mysql_query($sql);
-          //verificando a inserção
+          $resultado=mysqli_query($sql, $conexao);
+          //verificando a inserÃ§Ã£o
           echo"
 				<meta http-equiv=refresh content='0; URL=login.html';>
-				<script type=\"text/javascript\">alert(\"Cadastrado com sucesso! Faça Login para continuar\");</script>";
+				<script type=\"text/javascript\">alert(\"Cadastrado com sucesso! Faï¿½a Login para continuar\");</script>";
      	?>
         
 		
@@ -119,7 +119,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">Página Inicial</a></td>
+							<td><a href="index.html">Pï¿½gina Inicial</a></td>
 							<td><a href="equipamentos.html">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>

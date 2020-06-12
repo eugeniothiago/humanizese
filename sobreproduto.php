@@ -89,31 +89,36 @@
 	require'conexao.php';
 	session_start();
 	$verificalogin=$_SESSION['verificalogin'];
-	if ($verificalogin==0) {
-		echo 
-				"<meta http-equiv=refresh content='0; URL=login.html';>
-				<script type=\"text/javascript\">alert(\"Você não tem permissão para acessar esta página. Faça login ou cadastre-se para poder visualizar os detalhes do equipamento. \");</script>
-				";
-	}
-	else {
-		$verificalogin="1";
-	$recuperaId = $_GET['id'];
-		$nenhum="";		
-	$selecionar=mysql_query("SELECT * FROM produto where id='$recuperaId'");
-		if(@mysql_num_rows($selecionar)==0){
-			$nenhum=" Houve um erro na exibição dos dados do produto";
-			}
-		else{
-			while($linha=mysql_fetch_array($selecionar)){
-			
-			$produto=$linha['nome'];
-			$imagem=$linha['imagem'];
-			$descricao=$linha['descricao'];
-			$estado= $linha ['estado'];
-			$emailu=$linha['emailuser'];
-			}
+	if ($verificalogin==0) 
+		{
+			echo 
+					"<meta http-equiv=refresh content='0; URL=login.html';>
+					<script type=\"text/javascript\">alert(\"Você não tem permissão para acessar esta página. Faça login ou cadastre-se para poder visualizar os detalhes do equipamento. \");</script>
+					";
 		}
-	}
+				else {
+				$verificalogin="1";
+				$recuperaId = $_GET['id'];
+				$nenhum="";	
+				$sql="SELECT * FROM produto where id='$recuperaId'";
+				$selecionar=mysqli_query($conexao,$sql);
+					if(@mysqli_num_rows($selecionar)==0)
+						{
+							$nenhum=" Houve um erro na exibição dos dados do produto";
+						}
+					else
+						{
+							while($linha=mysqli_fetch_array($selecionar))
+								{
+								
+									$produto=$linha['nome'];
+									$imagem=$linha['imagem'];
+									$descricao=$linha['descricao'];
+									$estado= $linha ['estado'];
+									$emailu=$linha['emailuser'];
+								}
+						}
+				}
 			
 				?>
 					<table>

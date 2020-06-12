@@ -18,8 +18,8 @@
          $estadop=$_POST['estadof'];
          $cidadep=$_POST['cidadef'];
          $senhap=$_POST ['senhaf'];
-         $sql="UPDATE login SET nome='$nomep',endereco='$enderecop',telefone='$telefonep',estado='$estadop',cidade='$cidadep',senha='$senhap' WHERE email='$email'";
-          $resultado=mysql_query($sql);
+    	$sql="UPDATE login SET nome='$nomep',endereco='$enderecop',telefone='$telefonep',estado='$estadop',cidade='$cidadep',senha='$senhap' WHERE email='$email'";
+        $resultado=mysqli_query($conexao,$sql);
 		  echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=paineluser.php'>
 		  <script type=\"text/javascript\">alert(\"Dados Alterados com Sucesso!\");</script>";
 		  

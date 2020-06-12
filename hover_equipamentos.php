@@ -84,19 +84,25 @@
 			<?php
 			error_reporting(0);
 			require 'conexao.php';
-			$nenhum="";		
-			$selecionar=mysql_query("SELECT * FROM produto ORDER BY nome ASC");
-			if(@mysql_num_rows($selecionar)==0){
-				$nenhum=" Nenhum produto cadastrado";
+			$nenhum="";	
+			$query= "SELECT * FROM produto ORDER BY nome ASC";
+			$sql=mysqli_query($conexao,$query);
+			if(@mysqli_num_rows($sql)==0)
+				{
+					$nenhum=" Nenhum produto cadastrado";
 				}
-			else{
-				while($linha=mysql_fetch_array($selecionar)){
-				$id =$linha['id'];
-				$imagem=$linha ['imagem'];
-				$produto=$linha['nome'];
-				$estado=$linha['estado'];
-				$descricao=$linha ['descricao'];
-				$estadof=$linha ['estado'];
+			else
+				{
+					while($linha=mysqli_fetch_array($sql))
+					{
+						$id =$linha['id'];
+						$imagem=$linha ['imagem'];
+						$produto=$linha['nome'];
+						$estado=$linha['estado'];
+						$descricao=$linha ['descricao'];
+						$estadof=$linha ['estado'];
+					}
+				}
 				?>
 
 			<ul class="grid cs-style-7">
@@ -182,4 +188,5 @@
 			</div>
 		</div>
 	</body>
+
 </html>

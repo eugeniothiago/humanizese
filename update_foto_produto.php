@@ -59,8 +59,8 @@
             }
             echo " Nome do arquivo: $novoNome" ;
             $id=$_POST['id'];
-			$sql="UPDATE produto SET imagem='$novoNome' WHERE id='$id'";
-			$resultado=mysql_query($sql);
+            $sql="UPDATE produto SET imagem='$novoNome' WHERE id='$id'";
+			$resultado=mysqli_query($conexao,$sql);
 			echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=paineluser.php'>";
 			?>
 </body>

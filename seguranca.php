@@ -4,6 +4,7 @@
 </HEAD>
 <BODY>
       <?php
+        require 'conexao.php';
         //  Configuracoes do Script
         // ==============================
         $_SG['conectaServidor'] = true;    // Abre uma conex�o com o servidor MySQL
@@ -30,8 +31,8 @@
 
         // Verifica se precisa fazer a conex�o com o MySQL
           if ($_SG['conectaServidor'] == true) {
-            $_SG['link'] = mysql_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha']) or die("MySQL: N�o foi poss�vel conectar-se ao servidor [".$_SG['servidor']."].");
-            mysql_select_db($_SG['banco'], $_SG['link']) or die("MySQL: N�o foi poss�vel conectar-se ao banco de dados [".$_SG['banco']."].");
+            $_SG['link'] = mysqli_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha']) or die("MySQL: N�o foi poss�vel conectar-se ao servidor [".$_SG['servidor']."].");
+            mysqli_select_db($_SG['banco'], $_SG['link']) or die("MySQL: N�o foi poss�vel conectar-se ao banco de dados [".$_SG['banco']."].");
           }
 
         // Verifica se precisa iniciar a sessao
@@ -56,28 +57,33 @@
             $nsenha = addslashes($senha);
 
             // Monta uma consulta SQL para procurar um usu�rio
+            require 'conexao.php';
             $sql = "SELECT `id`, `nome` FROM `".$_SG['tabela']."` WHERE ".$cS." `email` = '".$nusuario."' AND ".$cS." `senha` = '".$nsenha."' LIMIT 1";
-            $query = mysql_query($sql);
-            $resultado = mysql_fetch_assoc($query);
+            $query = mysqli_query($conexao,$sql);
+            $resultado = mysqli_fetch_assoc($query);
 
             // Verifica se encontrou algum registro
-            if (empty($resultado)) {
+            if (empty($resultado)) 
+            {
               /* Nenhum registro foi encontrado => o usuario e invalido */
               return false;
-            } else {
-              // Definimos dois valores na sessao com os dados do usuario
-              $_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
-              $_SESSION['usuarioNome'] = $resultado['nome']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
+            } 
+            else 
+              {
+                  // Definimos dois valores na sessao com os dados do usuario
+                  $_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
+                  $_SESSION['usuarioNome'] = $resultado['nome']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
 
-              // Verifica a opcao se sempre validar o login
-              if ($_SG['validaSempre'] == true) {
-                // Definimos dois valores na sessao com os dados do login
-                $_SESSION['usuarioLogin'] = $usuario;
-                $_SESSION['usuarioSenha'] = $senha;
+                  // Verifica a opcao se sempre validar o login
+                  if ($_SG['validaSempre'] == true)
+                    {
+                      // Definimos dois valores na sessao com os dados do login
+                      $_SESSION['usuarioLogin'] = $usuario;
+                      $_SESSION['usuarioSenha'] = $senha;
+                    }
+
+                return true;
               }
-
-              return true;
-            }
           }
 
         /**

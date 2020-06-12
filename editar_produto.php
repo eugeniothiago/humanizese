@@ -46,7 +46,8 @@
 					$imagem=$_SESSION ['imagem'];
 					$verificalogin=$_SESSION['verificalogin'];
 					
-					if ($verificalogin==1){
+					if ($verificalogin==1)
+					{
 						$linklogin="paineluser.php";
 						$imglogin=$imagem;
 						$width="20%";
@@ -82,13 +83,14 @@
 			session_start();
 			$verificalogin=$_SESSION['verificalogin'];
 			$recuperaId = $_GET['id'];
-				$nenhum="";		
-			$selecionar=mysql_query("SELECT * FROM produto where id='$recuperaId'");
-				if(@mysql_num_rows($selecionar)==0){
+			$nenhum="";	
+			$sql = "SELECT * FROM produto where id='$recuperaId'"	;
+			$selecionar=mysqli_query($conexao, $sql);
+				if(@mysqli_num_rows($selecionar)==0){
 			$nenhum=" Houve um erro na exibição dos dados do produto";
 			}
 		else{
-			while($linha=mysql_fetch_array($selecionar)){
+			while($linha=mysqli_fetch_array($selecionar)){
 
 			$id=$linha['id'];
 			$produto=$linha['nome'];

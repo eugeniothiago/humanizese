@@ -22,7 +22,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.php">P¡GINA INICIAL</a></td>
+							<td><a href="index.php">P√ÅGINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.php">PROJETO</a></td>
 							<td><a href="contato.php">CONTATO</a></td>
@@ -84,20 +84,20 @@
 						<td>Nome do Produto</td><td><input type="text" name="nomef" id="nomef" required style="transition: border 0.3s; width: 182; border-radius: 4px; border-width: 2px; border-style: solid; border-color: #bebebe"></td>
                     </tr>
                     <tr>
-                        <td>Estado de ConservaÁ„o</td>
+                        <td>Estado de ConservaÔøΩÔøΩo</td>
                         <td><select name="estadocf" style="transition: border 0.3s; width: 182; border-radius: 4px; border-width: 2px; border-style: solid; border-color: #bebebe">
                                                                         <option selected value="0"></option>
                                                                         <option value="Excelente">Excelente</option>
-                                                                        <option value="Otimo">”timo</option>
+                                                                        <option value="Otimo">√ìtimo</option>
                                                                         <option value="Bom">Bom</option>
                                                                         <option value="Regular">Regular</option>
-                                                                        <option value="Pessimo">PÈssimo</option>
+                                                                        <option value="Pessimo">P√©ssimo</option>
                                                            </select>
                          </td>
                     </tr>
 					<tr>
-						<td>DescriÁ„o do Produto</td>
-                        <td><textarea cols="30" rows="10" placeholder="Escreva aqui detalhes do produto em quest„o" name="descricaof" style="transition: border 0.3s; width: 182; border-radius: 4px; border-width: 2px; border-style: solid; border-color: #bebebe"></textarea></td>
+						<td>Descri√ß√£o do Produto</td>
+                        <td><textarea cols="30" rows="10" placeholder="Escreva aqui detalhes do produto em questÔøΩo" name="descricaof" style="transition: border 0.3s; width: 182; border-radius: 4px; border-width: 2px; border-style: solid; border-color: #bebebe"></textarea></td>
                     </tr>
 					<tr>
 						<td>Imagem do Produto</td><td><input type="file" name="arquivo" id="arquivo" accept="image/x-png, image/gif, image/jpeg"></td>
@@ -110,7 +110,7 @@
 						</form>						
 				</table>
 				
-				<!-- RODAP…-->
+				<!-- RODAPÔøΩ-->
 				<br><br><br><br><br>
 				<footer>
 				<div id="mapa">
@@ -119,7 +119,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">P·gina Inicial</a></td>
+							<td><a href="index.html">P√°gina Inicial</a></td>
 							<td><a href="equipamentos.html">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>

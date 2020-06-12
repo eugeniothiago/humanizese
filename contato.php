@@ -19,7 +19,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.php">P¡GINA INICIAL</a></td>
+							<td><a href="index.php">P√ÅGINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.php">PROJETO</a></td>
 							<td><a href="contato.php">CONTATO</a></td>
@@ -78,7 +78,7 @@
 			<div class="contato_page">
 			<center><h4>FALE CONOSCO</h4></center>
 			<br>
-			<h5>Caso queira enviar perguntas, sugestıes, reclamaÁıes ou elogios, mande um e-mail para nossa equipe ou utilize uma das redes sociais.</h5>
+			<h5>Caso queira enviar perguntas, sugest√µes, reclama√ß√µes ou elogios, mande um e-mail para nossa equipe ou utilize uma das redes sociais.</h5>
 			<br>
 				<center>
 				<a href="mailto:misigners@mail.com"><img src="img/enviar.png" width="35%"></a>
@@ -88,7 +88,7 @@
 				<a href="https://plus.google.com/misigners"><img src="img/plus.png" width="9%"></a>
 				</center>
 			</div>
-		<!-- RODAP…-->
+		<!-- RODAPÔøΩ-->
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<footer>
 				<div id="mapa">
@@ -98,7 +98,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">P·gina Inicial</a></td>
+							<td><a href="index.html">P√°gina Inicial</a></td>
 							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>

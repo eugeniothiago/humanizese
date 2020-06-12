@@ -16,7 +16,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.html">P¡GINA INICIAL</a></td>
+							<td><a href="index.html">P√ÅGINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.html">PROJETO</a></td>
 							<td><a href="contato.html">CONTATO</a></td>
@@ -63,11 +63,11 @@
                 $extensao = strtolower($extensao);
              
                 // Somente imagens, .jpg;.jpeg;.gif;.png
-                // Aqui eu enfilero as extesıes permitidas e separo por ';'
+                // Aqui eu enfilero as extesÔøΩes permitidas e separo por ';'
                 // Isso server apenas para eu poder pesquisar dentro desta String
                 if(strstr('.jpg;.jpeg;.gif;.png', $extensao))
                 {
-                    // Cria um nome ˙nico para esta imagem
+                    // Cria um nome ÔøΩnico para esta imagem
                     // Evita que duplique as imagens no servidor.
                     $novoNome = md5(microtime()) . $extensao;
                      
@@ -81,14 +81,14 @@
                         
                     }
                     else
-                        echo "Erro ao salvar o arquivo. Aparentemente vocÍ n„o tem permiss„o de escrita.<br />";
+                        echo "Erro ao salvar o arquivo. Aparentemente voc√™ n√£o tem permiss√£o de escrita.<br />";
                 }
                 else
-                    echo "VocÍ poder· enviar apenas arquivos *.jpg; *.jpeg;*.gif;*.png<br />";
+                    echo "Voc√™ poder√° enviar apenas arquivos *.jpg; *.jpeg;*.gif;*.png<br />";
             }
             else
             {
-                echo "VocÍ n„o enviou nenhum arquivo!";
+                echo "Voc√™ n√£o enviou nenhum arquivo!";
             }
             echo " Nome do arquivo: $novoNome" ;	
 		 	
@@ -97,11 +97,11 @@
 		 $descricaop=$_POST['descricaof'];
          $sql="insert into produto(nome,estado,descricao,imagem,emailuser)
           values('$nomep','$estadocp','$descricaop','$novoNome','$email')";
-          $resultado=mysql_query($sql);
-          //verificando a inserÁ„o
+          $resultado=mysqli_query($sql, $conexao);
+          //verificando a inserÔøΩÔøΩo
           $sql ="SELECT*FROM produto";
           //Executamos a query
-          $resultado=mysql_query($sql);
+          $resultado=mysqli_query($sql,$conexao);
 		  echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=paineluser.php'>";
         
         ?>
@@ -114,7 +114,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">P·gina Inicial</a></td>
+							<td><a href="index.html">P√°gina Inicial</a></td>
 							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>
@@ -134,7 +134,8 @@
 							<td><a href="https://www.twitter.com/humanizese"><img src="img/twitter.png" width="12%"></a>
 								<a href="https://www.facebook.com/misigners"><img src="img/facebook.png" width="12%"></a>
 								<a href="https://plus.google.com/misigners"><img src="img/plus.png" width="12%"></a>
-								<a href="mailto:misigners@mail.com"><img src="img/mail.png" width="12%"></a></td>
+								<a href="mailto:misigners@mail.com"><img src="img/mail.png" width="12%"></a>
+							</td>
 						</tr>
 					</table>
 				</div>	

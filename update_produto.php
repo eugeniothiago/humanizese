@@ -16,10 +16,10 @@
         $estadop=$_POST['estadof'];
         $descricaop=$_POST['descricaof'];
         $sql="UPDATE produto SET nome='$nomep', estado='$estadop', descricao='$descricaop' WHERE id='$id'";
-          $resultado=mysql_query($sql);
+          $resultado=mysqli_query($conexao,$sql);
 		  echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=paineluser.php'>
 		  <script type=\"text/javascript\">alert(\"Produto Alterado com Sucesso!\");</script>";
 		  
-		  ?>
+	?>
 </body>
 </html>

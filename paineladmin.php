@@ -146,24 +146,26 @@
 					$emailadm=$_SESSION['emailSession'];
 					$sql ="SELECT*FROM login ";
                     //Executamos a Query
-                    $resultado=mysql_query($sql);
-                    while ($linha=mysql_fetch_array($resultado))
-                    {
-					$id =$linha['id'];
-					$nome=$linha['nome'];
-					$email=$linha['email'];
-					$imagem=$linha ['foto'];
+					$resultado=mysqli_query($conexao,$sql);
+					
+                    while ($linha=mysqli_fetch_array($resultado))
+						{
+							$id =$linha['id'];
+							$nome=$linha['nome'];
+							$email=$linha['email'];
+							$imagem=$linha ['foto'];
+						
 					?>
                     
-                    <div class="boxuser">
-					<img src="upload/usuarios/<?php echo $imagem; ?>"><br>
-                    <?php
-					echo "Código: <i>". $id."</i><BR>";
-					echo "Nome: <i>".$nome."</i><BR>";
-					echo "Email: <i>".$email."</i><BR>";
-					echo "<span><a href='deleteusuario.php?id=$id'onclick='return verificar();'>Excluir Usu�rio</a></span>";
-					?>
-                    </div>
+							<div class="boxuser">
+							<img src="upload/usuarios/<?php echo $imagem; ?>"><br>
+								<?php
+									echo "Código: <i>". $id."</i><BR>";
+									echo "Nome: <i>".$nome."</i><BR>";
+									echo "Email: <i>".$email."</i><BR>";
+									echo "<span><a href='deleteusuario.php?id=$id'onclick='return verificar();'>Excluir Usuário</a></span>";
+								?>
+							</div>
             
             		<?php
 					}
@@ -182,27 +184,28 @@
 					error_reporting(0);
 					require 'conexao.php';
 					$sql ="SELECT*FROM produto ";
-                    $resultado=mysql_query($sql);
-                    while ($linha=mysql_fetch_array($resultado))
+					$resultado=mysqli_query($conexao, $sql);
+					
+                    while ($linha=mysqli_fetch_array($resultado))
                     {
-					$id =$linha['id'];
-					$produto=$linha['nome'];
-					$estado=$linha['estado'];
-					$descricao=$linha ['descricao'];
-					$imagem=$linha ['imagem'];
+						$id =$linha['id'];
+						$produto=$linha['nome'];
+						$estado=$linha['estado'];
+						$descricao=$linha ['descricao'];
+						$imagem=$linha ['imagem'];
 				?>
                     
-					<div class="boxproduto">
-					<img src="upload/produtos/<?php echo $imagem; ?>"><br>
-                    <?php
-					echo "C�digo: <i>". $id."</i><BR>";
-					echo "Produto: <i>".$produto."</i><BR>";
-					echo "Estado de Conserva��o: <i>".$estado."</i><BR>";
-					echo "Descri��o: <i>".$descricao."</i><BR>";
-					echo "<span><a href='deleteproduto.php?id=$id' onclick='return verificar();'>Excluir Produto</a></span>";
-					?>
-                    <BR>
-					</div>
+							<div class="boxproduto">
+							<img src="upload/produtos/<?php echo $imagem; ?>"><br>
+								<?php
+									echo "Código: <i>". $id."</i><BR>";
+									echo "Produto: <i>".$produto."</i><BR>";
+									echo "Estado de Conservação: <i>".$estado."</i><BR>";
+									echo "Descrição: <i>".$descricao."</i><BR>";
+									echo "<span><a href='deleteproduto.php?id=$id' onclick='return verificar();'>Excluir Produto</a></span>";
+								?>
+							<BR>
+							</div>
             
             		<?php
 					}

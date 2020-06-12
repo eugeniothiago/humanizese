@@ -86,42 +86,54 @@
                     <ul>	
                     	<?php
                     		require 'conexao.php';
-                    		$nenhum="";		
-							$selecionar=mysql_query("SELECT * FROM banner where id='1'");
-							if(@mysql_num_rows($selecionar)==0){
-							$nenhum=" Nenhuma imagem encontrada";
-							}
-							else{
-							while($linha=mysql_fetch_array($selecionar)){
-							$bannerimg=$linha ['imagem'];
+							$nenhum="";
+							$sql = "SELECT * FROM banner where id='1'";	
+							$selecionar=mysqli_query($conexao, $sql);
+								if(@mysqli_num_rows($selecionar)==0)
+									{
+										$nenhum=" Nenhuma imagem encontrada";
+									}
+										else
+										{
+											while($linha=mysqli_fetch_array($selecionar))
+												{
+													$bannerimg=$linha ['imagem'];
+												}
+										}
+						?>
+						<?php
+                    		require 'conexao.php';
+							$nenhum="";		
+							$sql= "SELECT * FROM banner where id='2'";
+							$selecionar=mysqli_query($conexao,$sql);
+							if(@mysqli_num_rows($selecionar)==0)
+								{
+									$nenhum=" Nenhuma imagem encontrada";
 								}
-							}
+									else
+									{
+										while($linha=mysqli_fetch_array($selecionar))
+											{
+												$bannerimg2=$linha ['imagem'];
+											}
+									}
 						?>
 						<?php
                     		require 'conexao.php';
                     		$nenhum="";		
-							$selecionar=mysql_query("SELECT * FROM banner where id='2'");
-							if(@mysql_num_rows($selecionar)==0){
-							$nenhum=" Nenhuma imagem encontrada";
-							}
-							else{
-							while($linha=mysql_fetch_array($selecionar)){
-							$bannerimg2=$linha ['imagem'];
+							$sql= "SELECT * FROM banner where id='3'";
+							$selecionar=mysqli_query($conexao,$sql);
+								if(@mysqli_num_rows($selecionar)==0)
+								{
+									$nenhum=" Nenhuma imagem encontrada";
 								}
-							}
-						?>
-						<?php
-                    		require 'conexao.php';
-                    		$nenhum="";		
-							$selecionar=mysql_query("SELECT * FROM banner where id='3'");
-							if(@mysql_num_rows($selecionar)==0){
-							$nenhum=" Nenhuma imagem encontrada";
-							}
-							else{
-							while($linha=mysql_fetch_array($selecionar)){
-							$bannerimg3=$linha ['imagem'];
-								}
-							}
+									else
+									{
+										while($linha=mysqli_fetch_array($selecionar))
+										{
+											$bannerimg3=$linha ['imagem'];
+										}
+									}
 						?>
                         <li><img src="upload/banner/img1/<?php echo $bannerimg;?>" alt="Encontre" title="Encontre" id="wows1_0"/></li>
                         <li><img src="upload/banner/img2/<?php echo $bannerimg2;?>" alt="Ajude" title="Ajude" id="wows1_1"/></li>
@@ -169,20 +181,24 @@
 				<div id="text_index_final">
 					<?php
                     		require 'conexao.php';
-                    		$nenhum="";		
-							$selecionar=mysql_query("SELECT * FROM index WHERE id='1'");
-							if(@mysql_num_rows($selecionar)==0){
-							$nenhum=" Nenhuma registro encontrado";
-							}
-							else{
-								while($linha=mysql_fetch_array($selecionar)){
-								$id =$linha['id'];
-								$titulo1=$linha ['titulo'];
-								$texto1=$linha['texto'];
-								echo $titulo1;
-								echo "klsdjkldsafjl�djkldsf ~lkjk dsaf  celia";
-								}
-							}
+							$nenhum="";	
+							$sql= "SELECT * FROM index WHERE id='1'";
+							$selecionar=mysqli_query($conexao,$sql);
+								if(@mysqli_num_rows($selecionar)==0)
+									{
+										$nenhum=" Nenhuma registro encontrado";
+									}
+										else
+										{
+											while($linha=mysqli_fetch_array($selecionar))
+												{
+													$id =$linha['id'];
+													$titulo1=$linha ['titulo'];
+													$texto1=$linha['texto'];
+													echo $titulo1;
+													echo "klsdjkldsafjl�djkldsf ~lkjk dsaf  celia";
+												}
+										}
                 	?>
 					<h3>CONHEÇA O PROJETO</h3>
 					<br>
@@ -197,18 +213,22 @@
 				<div id="index_text">
 					<?php
                     		require 'conexao.php';
-                    		$nenhum="";		
-							$selecionar=mysql_query("SELECT * FROM index WHERE id=2");
-							if(@mysql_num_rows($selecionar)==0){
-							$nenhum=" Nenhuma registro encontrado";
-							}
-							else{
-							while($linha=mysql_fetch_array($selecionar)){
-							$id =$linha['id'];
-							$titulo2=$linha ['titulo'];
-							$texto2=$linha['texto'];
-							}
-							}
+							$nenhum="";	
+							$sql ="SELECT * FROM index WHERE id=2";
+							$selecionar=mysqli_query($conexao,$sql);
+								if(@mysqli_num_rows($selecionar)==0)
+									{
+										$nenhum=" Nenhuma registro encontrado";
+									}
+								else
+									{
+										while($linha=mysqli_fetch_array($selecionar))
+											{
+												$id =$linha['id'];
+												$titulo2=$linha ['titulo'];
+												$texto2=$linha['texto'];
+											}
+									}
                 	?>
 					<h1>POR UM MUNDO MAIS HUMANO</h1>
 					<p><h2>Aqui você encontra equipamentos para portadores de deficiência física. Você pode tanto anunciar seu produto como solicitar um deles diretamente com o doador.</p>

@@ -17,7 +17,7 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.php">P�GINA INICIAL</a></td>
+							<td><a href="index.php">PÁGINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
 							<td><a href="projeto.php">PROJETO</a></td>
 							<td><a href="contato.php">CONTATO</a></td>
@@ -77,7 +77,7 @@
             		$buscap=$_POST['buscaf'];
                     $sql ="SELECT*FROM produto where nome='$buscap'";
                     //Executamos a Query
-                    $resultado=mysql_query($sql);
+                    $resultado=mysqli_query($conexao, $sql);
                     ?>
                    
                    
@@ -92,7 +92,7 @@
                     
                     <?php
                     $x=0;
-                    while ($linha=mysql_fetch_array($resultado))
+                    while ($linha=mysqli_fetch_array($resultado))
                     {
 						$id =$linha['id'];
 						$produto=$linha['nome'];
@@ -132,7 +132,7 @@
 					}
 					if($x==0)
 					{
-					echo "N�o existem cadastros no banco de dados";
+					echo "Não existem cadastros no banco de dados";
 					}
 					
 					?>
@@ -151,7 +151,7 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">P�gina Inicial</a></td>
+							<td><a href="index.html">Página Inicial</a></td>
 							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
 						<tr>
 							<td><a href="projeto.html">Projeto</a></td>
