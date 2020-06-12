@@ -16,10 +16,10 @@
 				<div id="menu">
 					<table>
 						<tr>
-							<td><a href="index.html">P�GINA INICIAL</a></td>
+							<td><a href="index.php">PÁGINA INICIAL</a></td>
 							<td><a href="hover_equipamentos.php">EQUIPAMENTOS</a></td>
-							<td><a href="projeto.html">PROJETO</a></td>
-							<td><a href="contato.html">CONTATO</a></td>
+							<td><a href="projeto.php">PROJETO</a></td>
+							<td><a href="contato.php">CONTATO</a></td>
 						</tr>
 					</table>
 				</div>
