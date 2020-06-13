@@ -51,7 +51,7 @@
                         echo "Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />";
                 }
                 else
-                    echo "Você poderá enviar apenas arquivos *.jpg; *.jpeg;*.gif;*.png<br />";
+                    echo "Você poderá enviar apenas arquivos nos formatos *.jpg; *.jpeg;*.gif;*.png<br />";
             }
             else
             {

@@ -166,11 +166,11 @@
 							<td><h1>HUMANIZE-SE</h1></td>
 						</tr>
 						<tr>
-							<td><a href="index.html">Página Inicial</a></td>
+							<td><a href="index.php">Página Inicial</a></td>
 							<td><a href="hover_equipamentos.php">Equipamentos</a></td></tr>
 						<tr>
-							<td><a href="projeto.html">Projeto</a></td>
-							<td><a href="contato.html">Contato</a></td></tr>
+							<td><a href="projeto.php">Projeto</a></td>
+							<td><a href="contato.php">Contato</a></td></tr>
 						<tr>	
 							<td><a href="cadastro.html">Cadastro</a></td>
 							<td><a href="#" onclick="window.open('termos.html', 'Termos', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=500, HEIGHT=400');">Termos de Uso</a></td>

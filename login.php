@@ -11,6 +11,7 @@
 		session_start();
 		$email=$_POST['email'];
 		$senha=$_POST['senha'];
+		$nome= $_POST['nome'];
 		$emailadm="admin@admin.com";
 		$adm="N";
 		$verificalogin="0";
@@ -36,9 +37,10 @@
 					{
 						$_SESSION['emailSession']= $email;
 						$_SESSION['senhaSession']= $senha;
+						$_SESSION['nomeSession']= $nome;
 						echo"
 							<meta http-equiv=refresh content='0; URL=paineluser.php';>
-							<script type=\"text/javascript\">alert(\"Bem Vindo Usuário!\");</script>
+							<script type=\"text/javascript\">alert(\"Bem Vindo <?php echo $nome ?>!\");</script>
 						";
 					}
 				else 

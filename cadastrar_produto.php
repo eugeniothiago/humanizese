@@ -18,7 +18,7 @@
             $email=$_SESSION['emailSession']
             ?>
 			<header>
-			<a href="index.html"><img src="img/logo_header.png" width="20%" style="margin-left: 10px; margin-top: 10px;"></a>
+			<a href="index.php"><img src="img/logo_header.png" width="20%" style="margin-left: 10px; margin-top: 10px;"></a>
 				<div id="menu">
 					<table>
 						<tr>
