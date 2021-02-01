@@ -1,2 +1,2 @@
 # humanizese
-Projeto de TCC desenvolvido para o Técnico de Desenvolvimento WEB.
+Projeto de TCC desenvolvido para o Técnico em Desenvolvimento WEB realizado em 2014.
